@@ -1,0 +1,27 @@
+{
+  "name": "sample",
+  "version": "1.0.0",
+  "description": "fsjld",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexandruAmugea/node-safari.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexandruAmugea/node-safari/issues"
+  },
+  "homepage": "https://github.com/AlexandruAmugea/node-safari#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "file-system": "^2.2.2",
+    "http": "0.0.0",
+    "mongodb": "^2.2.33",
+    "mustache-express": "^1.2.5"
+  }
+}

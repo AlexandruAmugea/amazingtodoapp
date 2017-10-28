@@ -1,0 +1,37 @@
+<html>
+        <head>
+    
+        </head>
+        <body>
+            <form action="/tasks/new" method="POST">
+                <input type="text" name="description">
+                <input type="submit">
+            </form>
+    
+            <ul id="task-area"></ul>
+    
+            <script>
+                fetch('/tasks').then(function(res){
+                    res.json().then(function(data){
+                        console.log(data);
+                        data.forEach(function(task){
+                            let taskhtml = document.createElement('li');
+                            let deleteButton = document.createElement('button');
+                            let updateButton = document.createElement('button');
+                            deleteButton.innerHTML = "delete this task";
+                            updateButton.innerHTML = "update this task";
+
+                            updateButton.addEventListener('click', function(){
+                                updatetask(task._id, task.description);
+                            })
+    
+                            taskhtml.innerText = task.description;
+                            document.getElementById('task-area').append(taskhtml);
+                            document.getElementById('task-area').append(deleteButton);
+                            document.getElementById('task-area').append(updateButton);
+                        })
+                    })
+                })
+            </script>
+        </body>
+    </html>
